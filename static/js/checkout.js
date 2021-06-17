@@ -19,7 +19,7 @@ $(function () {
         if (merchant_id !== '') { // !== : type까지 같은지 체크
             IMP.request_pay({ //결제 요청 부분, iamport 메뉴얼에서 정의해준 포맷
                 merchant_uid: merchant_id,
-                name: 'DjangoOfDelivery product', //임의의 이름
+                name: '배달의 장고', //임의의 이름
                 buyer_name: $('input[name="first_name"]').val() + " " + $('input[name="last_name"]').val(),
                 buyer_email: $('input[name="email"]').val(),
                 amount: amount
