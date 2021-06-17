@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import pymysql
 import dj_database_url
+# from six.moves.urllib_parse import urlencode
+# from six.moves.urllib_request import urlopen
+import sys
+
+sys.modules['django.utils.six.moves.urllib.parse'] = __import__('six.moves.urllib_parse', fromlist=['urlencode'])
+sys.modules['django.utils.six.moves.urllib.request'] = __import__('six.moves.urllib_request', fromlist=['urlopen'])
 
 pymysql.install_as_MySQLdb()
 
